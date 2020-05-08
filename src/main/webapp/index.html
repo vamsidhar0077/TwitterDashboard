@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VNSS</title>
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/sb-admin-2.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/qunit/git/qunit.css" type="text/css" media="screen">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery-3.2.0.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script>
+    <script src="js/basic.js"></script>
+</head>
+<body id="page-top">
+<div id="wrapper">
+
+    <!-- Side Menu -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <h1 class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <div class="sidebar-brand-text mx-3">Faceted Search</div>
+        </h1>
+
+<!--        <iframe src="https://www.youtube.com/embed?listType=playlist&list=PLSti19ysyJtDYa2JdSjVYWaKhuul1jPUP" width="480" height="400"></iframe>-->
+<!--        <iframe width="720" height="405" src="https://www.youtube.com/embed/?listType=playlist&list=PLSti19ysyJtDYa2JdSjVYWaKhuul1jPUP" frameborder="0" allowfullscreen></iframe>-->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLSti19ysyJtDYa2JdSjVYWaKhuul1jPUP" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                <span>Country</span>
+            </a>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded" id="countryFilter">
+                    <input type="checkbox" id ="India" value="India" name="country">India</input><br>
+                    <input type="checkbox" id="USA" value="US" name="country">USA</input><br>
+                    <input type="checkbox" id="Brazil" value="Brazil" name="country">Brazil</input><br>
+                </div>
+            </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseTwo">
+                <span>Language</span>
+            </a>
+            <div id="collapseUtilities" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded" id="languageFilter">
+                    <input type="checkbox"  name="language" value="hi">Hindi</input><br>
+                    <input type="checkbox" name="language" value="en">English</input><br>
+                    <input type="checkbox" name="language" value="pt">Portuguese</input><br>
+                </div>
+            </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#poiUtilities" aria-expanded="true" aria-controls="collapseTwo">
+                <span>POI's</span>
+            </a>
+            <div id="poiUtilities" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded" id="poiFilter">
+                    <input type="checkbox"  name="user_name" value="Swamy39">Swamy</input><br>
+                    <input type="checkbox" name="user_name" value="RubikaLiyaquat">Rubika Liyaquat</input><br>
+                    <input type="checkbox" name="user_name" value="KamalaHarris">KamalaHarris</input><br>
+                    <input type="checkbox"  name="user_name" value="myogiadityanath">Yogi Adithyanath</input><br>
+                    <input type="checkbox" name="user_name" value="LulaOficial">Lula</input><br>
+                    <input type="checkbox" name="user_name" value="tedlieu">Tedlieu</input><br>
+                    <input type="checkbox"  name="user_name" value="manakgupta">manakgupta</input><br>
+                    <input type="checkbox" name="user_name" value="AOC">Alexandria Ocasio-Cortez</input><br>
+                    <input type="checkbox" name="user_name" value="CoryBooker">Cory Booker</input><br>
+                    <input type="checkbox" name="user_name" value="dilmabr">Dilma Rousseff</input><br>
+                    <input type="checkbox" name="user_name" value="FlavioBolsonaro">Flavio Bolsonaro</input><br>
+                    <input type="checkbox" name="user_name" value="PiyushGoyal">Piyush goyal</input><br>
+                    <input type="checkbox" name="user_name" value="joicehasselmann">Joice Hasselmann</input><br>
+                    <input type="checkbox" name="user_name" value="JoeBiden">Joe Biden</input><br>
+                    <input type="checkbox"  name="user_name" value="AskAnshul">Anshul</input><br>
+                    <input type="checkbox" name="user_name" value="jeanwyllys_real">Jean Wyllys</input><br>
+                </div>
+            </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#topicUtilities" aria-expanded="true" aria-controls="collapseTwo">
+                <span>Topic</span>
+            </a>
+            <div id="topicUtilities" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded" id="topicFilter">
+                    <input type="checkbox"  name="topic" value="Politics">Politics</input><br>
+                    <input type="checkbox" name="topic" value="Campaign">Campaign</input><br>
+                    <input type="checkbox" name="topic" value="Violence">Violence</input><br>
+                    <input type="checkbox" name="topic" value="Social Welfare">Social Welfare</input><br>
+                    <input type="checkbox" name="topic" value="Elections">Elections</input><br>
+                    <input type="checkbox" name="topic" value="Economy">Economy</input><br>
+                    <input type="checkbox" name="topic" value="Vote">Vote</input><br>
+                    <input type="checkbox" name="topic" value="Railway">Railway</input><br>
+                    <input type="checkbox" name="topic" value="News">News</input><br>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+            <!-- Topbar -->
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                <!-- Topbar Search -->
+                <!-- Sidebar Toggle (Topbar) -->
+                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <i class="fa fa-bars"></i>
+                </button>
+
+                <!-- Topbar Search -->
+                <form class="d-none d-sm-inline-block form-inline  mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search ">
+                    <div class="input-group" style="width: 235%">
+                        <input type="text" class="form-control  bg-light border-0 small" id = "searchedInput" placeholder="Search"
+                               aria-label="Search" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" id="getTweets" type="button">
+                                <i class="fas fa-search fa-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </nav>
+
+            <div class="container-fluid">
+                <div class="row">
+
+                    <!-- Area Chart -->
+                    <div class="col-xl-8 col-lg-7">
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Dropdown -->
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">Tweets</h6>
+                            </div>
+                            <!-- Card Body -->
+                            <div class="card-body">
+                                <div class="chart-area">
+                                    <div style="float: left;"  id="results">
+                                        <table id="itemList" class="table table-striped table-bordered"></table>
+                                    </div>
+
+                                    <canvas id="myAreaChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Dropdown -->
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">Topic</h6>
+                            </div>
+                            <!-- Card Body -->
+                            <div class="card-body">
+                                <div class="chart-pie pt-4 pb-2">
+                                    <canvas id="topicChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Pie Chart -->
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Dropdown -->
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">Tweets per Country</h6>
+                            </div>
+                            <!-- Card Body -->
+                            <div class="card-body">
+                                <div class="chart-pie pt-4 pb-2">
+                                    <canvas id="myPieChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Dropdown -->
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">Tweets per Language</h6>
+                            </div>
+                            <!-- Card Body -->
+                            <div class="card-body">
+                                <div class="chart-pie pt-4 pb-2">
+                                    <canvas id="myBarChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Dropdown -->
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">Sentiment Analysis</h6>
+                            </div>
+                            <!-- Card Body -->
+                            <div class="card-body">
+                                <div class="chart-pie pt-4 pb-2">
+                                    <canvas id="myLineChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
